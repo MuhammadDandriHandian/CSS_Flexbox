@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        .container {
+            width: 300px;
+            border: solid 3px black;
+            margin: 10px auto;
+            padding: 5px;
+            box-sizing: border-box; /* biar ukuran tidak berubah */
+            display: flex; /*biar kesamping (gak usah pake float)*/
+        }
+        .flex {
+            flex-direction: row-reverse; /* untuk menentukan arah itemnya, defaultnya row, (row-reverse, column, column-reverse) */
+            flex-wrap:wrap; /* agar konten turun ke bawah, karena defaultnya nowrap, (wrap, wrap-reverse)*/
+        }
+        .container div,
+        .condua div {
+            background-color: rgb(21, 21, 79);
+            width: 30px;
+            height: 30px;
+            color: white;
+            margin: 5px;
+        }
+        .justify {
+            justify-content: space-around; /*untuk mengatur posisi item (Klo pake display:flex) defaultnya flex-start, (flex-end, center, space-beetwen, space-around, space-evenly) */
+        }
+        .align {
+            height: 100px;
+            align-items: flex-end; /* mengatur posisi item berdasarkan cross axis (height) defaultnya flex-start, (flex-end, center, strect, baseline) */
+        }
+        .alig .tiga {
+            font-size: 30px;
+        }
+        .alig {
+            height: 100px;
+            align-items: baseline; /* mensejajarkan font */
+        }
+        .content {
+            height: 200px;
+            flex-wrap: wrap;
+            align-content: center; /* sama seperti align-item namun untuk yg memiliki lebih dari satu baris */
+        }
+        /* mengubah urutan konten (bila belum di order maka nilai konten = 0)*/
+        .dalem .dua { order: 1; }
+        .dalem .satu { order: 4; }
+        .dalem .tiga { order: 2; }
+        .dalem .empat { order: 3; }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container flex">
+        <div class="satu">1</div>
+        <div class="dua">2</div>
+        <div class="tiga">3</div>
+        <div class="empat">4</div>
+        <div class="lima">5</div>
+        <div class="enam">6</div>
+    </div>
+    <div class="container justify">
+        <div class="satu">1</div>
+        <div class="dua">2</div>
+        <div class="tiga">3</div>
+        <div class="empat">4</div>
+    </div>
+    <div class="container align">
+        <div class="satu">1</div>
+        <div class="dua">2</div>
+        <div class="tiga">3</div>
+        <div class="empat">4</div>
+    </div>
+    <div class="container alig">
+        <div class="satu">1</div>
+        <div class="dua">2</div>
+        <div class="tiga">3</div>
+        <div class="empat">4</div>
+    </div>
+    <div class="container content">
+        <div class="satu">1</div>
+        <div class="dua">2</div>
+        <div class="tiga">3</div>
+        <div class="empat">4</div>
+        <div class="lima">5</div>
+        <div class="enam">6</div>
+        <div class="tujuh">7</div>
+        <div class="delapan">8</div>
+        <div class="sembilan">9</div>
+        <div class="sepuluh">10</div>
+        <div class="sebelas">11</div>
+        <div class="duabelas">12</div>
+    </div>
+    <div class="container dalem">
+        <div class="satu">1</div>
+        <div class="dua">2</div>
+        <div class="tiga">3</div>
+        <div class="empat">4</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.container-satu {
+    max-width: 800px;
+    background-color: #ccc;
+    margin: 30px auto;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+}
+.container-satu .utama {
+    flex: 3;
+    order: 2;
+}
+.container-satu .satu {
+    flex: 1;
+    order: 1;
+}
+.container-satu .dua {
+    flex: 1;
+    order: 3;
+}
+
+.container-dua {
+    max-width: 800px;
+    margin:30px auto;
+}
+.layanan {
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.layanan.satu {
+    background-color: aqua;
+}
+.layanan.dua {
+    background-color: coral;
+}
+.layanan.tiga {
+    background-color: yellowgreen;
+}
+
+.container-tiga {
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.thumbnail {
+    width: 80%;
+    margin: 0 5px 0 5px;
+}
+.thumbnail img {
+    width: 100%;
+}
+
+.container-empat {
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+}
+.card {
+    border: black 2px solid;
+    border-radius: 10px;
+    background-color: #ccc;
+    overflow: hidden;
+    margin: 0 10px 0 10px;
+}
+.header {
+    height: 100px;
+    background-color: blue;
+    overflow: hidden;
+}
+.card.besar {
+    transform: scale(1.1);
+}
+.content {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.container-lima {
+    max-width: 300px;
+    min-height: 300px;
+    border: black solid 2px;
+    border-radius: 10px;
+    margin: 20px auto;
+    display: flex;
+}
+
+.kotak {
+    width: 100px;
+    height: 100px;
+    background-color: orangered;
+    margin: auto;
+    display: flex;
+    text-align: center;
+}
+.kotak span {
+    margin: auto;
+}
+
+@media (min-width:600px){
+    .container-dua {
+        display: flex;
+        justify-content: space-between;
+    }
+    .layanan {
+        width: 30%;
+    }
+    .thumbnail {
+        width: 40%;
+    }
+}
